@@ -1,0 +1,88 @@
+/* TrackSelection.css */
+.track-selection-container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .track-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .track-box {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .track-box:hover {
+    transform: scale(1.02);
+  }
+  
+  .track-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .track-image img {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  .track-info {
+    flex: 2;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .track-info h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .track-info p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .go-course-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+  }
+  
+  .go-course-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .quote-bar {
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #eee;
+    border-radius: 5px;
+    color: #333;
+  }
+  
