@@ -5,13 +5,17 @@ import PersonalDetails from "./PersonalDetails";
 import TrackSelection from "./TrackSelection";
 import SkillSelection from "./SkillSelection";
 import VideoRecommendations from "./VideoRecommendations";
+import QuizPage from "./QuizPage";
+import FinalPage from "./FinalPage"; // Import Final Page
+
+import "./App.css";
 
 function App() {
-  const [page, setPage] = useState("login"); // State to track current page
+  const [page, setPage] = useState("login"); // Default starts with LoginPage
 
   return (
     <div>
-      {/* Navbar (Common for all pages) */}
+      {/* Navbar (Always Visible) */}
       <div className="navbar">
         <h1 className="logo">⚡ Power Up</h1>
         <nav>
@@ -22,13 +26,15 @@ function App() {
         </nav>
       </div>
 
-      {/* Render pages based on state */}
+      {/* Page Rendering Based on State */}
       {page === "login" && <LoginPage setPage={setPage} />}
       {page === "about" && <AboutUs setPage={setPage} />}
       {page === "personalDetails" && <PersonalDetails setPage={setPage} />}
       {page === "trackSelection" && <TrackSelection setPage={setPage} />}
       {page === "skillSelection" && <SkillSelection setPage={setPage} />}
       {page === "videoRecommendations" && <VideoRecommendations setPage={setPage} />}
+      {page === "quizPage" && <QuizPage setPage={setPage} />}
+      {page === "finalPage" && <FinalPage />} {/* Final Page Added */}
     </div>
   );
 }

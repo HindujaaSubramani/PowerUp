@@ -1,51 +1,54 @@
 /* VideoRecommendations.css */
 .video-recommendations-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 .video-recommendations-container h2 {
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
     color: #333;
 }
 
 .video-recommendations-container p {
     font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
+    color: #555;
+    margin-bottom: 25px;
 }
 
 .video-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .video-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
+    background: #f8f9fa;
+    border: 2px solid #ccc;
     border-radius: 10px;
-    padding: 15px;
-    transition: 0.3s;
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
 }
 
 .video-box:hover {
-    background: #eef4ff;
+    background: #e9f2ff;
     border-color: #007bff;
+    transform: scale(1.02);
 }
 
 .video-box h3 {
     font-size: 18px;
+    font-weight: 500;
     color: #333;
     margin-bottom: 5px;
 }
@@ -57,32 +60,36 @@
 }
 
 .watch-button {
-    padding: 10px 15px;
+    padding: 10px 18px;
     background: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
-    transition: 0.3s;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
 .watch-button:hover {
     background: #0056b3;
+    transform: scale(1.05);
 }
 
 .next-button {
-    margin-top: 20px;
-    padding: 12px 25px;
+    margin-top: 30px;
+    padding: 12px 30px;
     background: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
 }
 
 .next-button:hover {
     background: #1e7e34;
+    transform: scale(1.05);
 }

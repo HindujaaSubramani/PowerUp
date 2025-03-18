@@ -3,7 +3,7 @@ import "./SkillSelection.css";
 
 const skills = [
   "HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB",
-  "Python", "Django", "Machine Learning", "UI/UX Design"
+  "Python", "Django", "Flask","Express.js","Angular.js","MySQL"
 ];
 
 const SkillSelection = ({ setPage }) => {
@@ -21,51 +21,44 @@ const SkillSelection = ({ setPage }) => {
   };
 
   return (
-    <div>
-      {/* Navbar */}
-      <div className="navbar">
-        <h1 className="logo">⚡ Power Up</h1>
-        <nav>
-          <ul className="nav-links">
-            <li onClick={() => setPage("about")}>ABOUT US</li>
-            <li onClick={() => setPage("login")}>LOGIN</li>
-          </ul>
-        </nav>
-      </div>
+    <div className="skill-selection-container">
+      <h2><strong>Choose Your Current Skills</strong></h2>
 
-      <div className="skill-selection-container">
-        <h2 className="title"><strong>Choose Your Current Skills</strong></h2>
-
-        <div className="skills-section">
-          <div className="skills-box">
-            <h3>Known Skills</h3>
-            {knownSkills.length > 0 ? (
-              knownSkills.map((skill, index) => (
-                <div key={index} className="skill-tag" onClick={() => toggleSkill(skill)}>
-                  {skill} ❌
-                </div>
-              ))
-            ) : (
-              <p>No known skills selected</p>
-            )}
-          </div>
-
-          <div className="skills-box">
-            <h3>Unknown Skills</h3>
-            {unknownSkills.length > 0 ? (
-              unknownSkills.map((skill, index) => (
-                <div key={index} className="skill-tag" onClick={() => toggleSkill(skill)}>
-                  {skill} ✅
-                </div>
-              ))
-            ) : (
-              <p>All skills selected</p>
-            )}
-          </div>
+      <div className="skills-section">
+        <div className="skills-box">
+          <h3>Known Skills</h3>
+          {knownSkills.length > 0 ? (
+            knownSkills.map((skill, index) => (
+              <div key={index} className="skill-tag" onClick={() => toggleSkill(skill)}>
+                {skill} ❌
+              </div>
+            ))
+          ) : (
+            <p>No known skills selected</p>
+          )}
         </div>
 
-        <button className="next-button" onClick={() => setPage("videoRecommendations")}>Next</button>
+        <div className="skills-box">
+          <h3>Unknown Skills</h3>
+          {unknownSkills.length > 0 ? (
+            unknownSkills.map((skill, index) => (
+              <div key={index} className="skill-tag" onClick={() => toggleSkill(skill)}>
+                {skill} ✅
+              </div>
+            ))
+          ) : (
+            <p>All skills selected</p>
+          )}
+        </div>
       </div>
+
+      {/* Navigates to VideoRecommendations page */}
+      <button className="next-button" onClick={() => setPage("videoRecommendations")}>
+        Next
+      </button>
+      <button className="Take-test" onClick={() => setPage("quizPage")}>
+        Take Test
+      </button>
     </div>
   );
 };

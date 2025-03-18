@@ -10,7 +10,7 @@ const TrackSelection = ({ setPage }) => {
   ];
 
   const handleTrackSelection = (track) => {
-    setPage("SkillSelection");
+    setPage("skillSelection");
   };
 
   return (

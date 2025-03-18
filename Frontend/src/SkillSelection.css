@@ -47,8 +47,14 @@
     background: #d1e0ff;
 }
 
-.next-button {
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     margin-top: 20px;
+}
+
+.next-button, .Take-test {
     padding: 10px 20px;
     background: #007bff;
     color: white;
@@ -59,6 +65,6 @@
     transition: 0.3s;
 }
 
-.next-button:hover {
+.next-button:hover, .take-test-button:hover {
     background: #0056b3;
 }
