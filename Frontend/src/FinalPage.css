@@ -1,59 +1,111 @@
-/* FinalPage.css */
+/* Final Page - Celebration Theme */
 .final-page-container {
     text-align: center;
     padding: 50px;
-    background: linear-gradient(to right, #ff9966, #ff5e62);
+    background: linear-gradient(135deg, #ff9966, #ff5e62, #ff0084);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Title Styling */
 .final-page-title {
-    font-size: 36px;
+    font-size: 40px;
     font-weight: bold;
     color: white;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* Motivational Quote */
 .final-page-quote {
-    font-size: 20px;
+    font-size: 22px;
     color: white;
     font-style: italic;
+    max-width: 600px;
+    padding: 0 20px;
 }
 
-/* Manually written styles instead of @for loop */
-.element-1 { width: 10px; }
-.element-2 { width: 20px; }
-.element-3 { width: 30px; }
-.element-4 { width: 40px; }
-.element-5 { width: 50px; }
-.element-6 { width: 60px; }
-.element-7 { width: 70px; }
-.element-8 { width: 80px; }
-.element-9 { width: 90px; }
-.element-10 { width: 100px; }
-
-/* Confetti Animation */
+/* Celebration Animation */
 @keyframes confetti-fall {
     0% { transform: translateY(-100vh) rotate(0deg); opacity: 1; }
     100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
 
+/* Confetti Elements */
 .confetti {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    opacity: 0.8;
-    animation: confetti-fall 4s linear infinite;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: confetti-fall 6s linear infinite;
 }
 
-/* Random Confetti Colors */
-.confetti:nth-child(odd) {
-    background-color: yellow;
+/* Random Colors for Confetti */
+.confetti:nth-child(5n) { background-color: yellow; }
+.confetti:nth-child(5n+1) { background-color: red; }
+.confetti:nth-child(5n+2) { background-color: blue; }
+.confetti:nth-child(5n+3) { background-color: green; }
+.confetti:nth-child(5n+4) { background-color: purple; }
+
+/* Positioning Confetti Randomly */
+.confetti:nth-child(1) { left: 5%; animation-duration: 5s; }
+.confetti:nth-child(2) { left: 20%; animation-duration: 4.5s; }
+.confetti:nth-child(3) { left: 35%; animation-duration: 6s; }
+.confetti:nth-child(4) { left: 50%; animation-duration: 4s; }
+.confetti:nth-child(5) { left: 65%; animation-duration: 5.5s; }
+.confetti:nth-child(6) { left: 80%; animation-duration: 4.8s; }
+.confetti:nth-child(7) { left: 95%; animation-duration: 5.2s; }
+
+/* CTA Button */
+.final-page-button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: #ffcc00;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.confetti:nth-child(even) {
-    background-color: red;
+
+.final-page-button:hover {
+    background: #ffea00;
+    transform: scale(1.05);
 }
+
+/* Firework Animation */
+@keyframes firework {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+.firework {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: firework 1.5s ease-out infinite;
+}
+
+/* Different Firework Colors */
+.firework:nth-child(odd) { background-color: gold; }
+.firework:nth-child(even) { background-color: cyan; }
+
+/* Random Placement for Fireworks */
+.firework:nth-child(1) { left: 20%; top: 30%; animation-delay: 0s; }
+.firework:nth-child(2) { left: 50%; top: 20%; animation-delay: 0.5s; }
+.firework:nth-child(3) { left: 80%; top: 25%; animation-delay: 1s; }
+.firework:nth-child(4) { left: 30%; top: 60%; animation-delay: 1.5s; }
+.firework:nth-child(5) { left: 70%; top: 70%; animation-delay: 2s; }

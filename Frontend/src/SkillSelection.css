@@ -1,16 +1,23 @@
-/* SkillSelection.css */
+/* Skill Selection Page - Consistent with Login Page */
 .skill-selection-container {
     max-width: 900px;
-    margin: 50px auto;
+    margin: 100px auto 40px;
     text-align: center;
+    font-family: "Poppins", sans-serif;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading */
 .skill-selection-container h2 {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
+/* Skills Section */
 .skills-section {
     display: flex;
     justify-content: space-between;
@@ -18,35 +25,52 @@
     margin-top: 20px;
 }
 
+/* Skills Box */
 .skills-box {
     flex: 1;
     border: 2px solid #ccc;
     border-radius: 10px;
-    padding: 15px;
-    background: white;
+    padding: 20px;
+    background: #f9f9f9;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Hover Effect */
+.skills-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Skill Title */
 .skills-box h3 {
     font-size: 18px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Skill Tags */
 .skill-tag {
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px 14px;
     border-radius: 20px;
     background: #f0f0f0;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    transition: background 0.3s, transform 0.2s;
     margin: 5px;
 }
 
+/* Hover Effect */
 .skill-tag:hover {
     background: #d1e0ff;
+    transform: scale(1.05);
 }
 
+/* Button Container */
 .button-container {
     display: flex;
     justify-content: center;
@@ -54,17 +78,39 @@
     margin-top: 20px;
 }
 
+/* Buttons */
 .next-button, .Take-test {
-    padding: 10px 20px;
-    background: #007bff;
+    padding: 12px 20px;
+    background: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.next-button:hover, .take-test-button:hover {
-    background: #0056b3;
+/* Hover Effect */
+.next-button:hover, .Take-test:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skill-selection-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-box {
+        width: 100%;
+        text-align: center;
+    }
 }

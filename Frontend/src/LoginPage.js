@@ -3,7 +3,7 @@ import "./LoginPage.css"; // Ensure this file exists in the same directory
 
 const LoginPage = ({ setPage }) => {
   return (
-    <div className="container">
+    <div className="login-container">
       {/* Top Banner */}
       <div className="top-banner">
         Every hour you invest in learning today multiplies your success tomorrow

@@ -15,16 +15,18 @@ function App() {
 
   return (
     <div>
-      {/* Navbar (Always Visible) */}
-      <div className="navbar">
-        <h1 className="logo">⚡ Power Up</h1>
-        <nav>
-          <ul className="nav-links">
-            <li onClick={() => setPage("about")}>ABOUT US</li>
-            <li onClick={() => setPage("login")}>LOGIN</li>
-          </ul>
-        </nav>
-      </div>
+      {/* Hide Navbar on Final Page */}
+      {page !== "finalPage" && (
+        <div className="navbar">
+          <h1 className="logo">⚡ Power Up</h1>
+          <nav>
+            <ul className="nav-links">
+              <li onClick={() => setPage("about")}>ABOUT US</li>
+              <li onClick={() => setPage("login")}>LOGIN</li>
+            </ul>
+          </nav>
+        </div>
+      )}
 
       {/* Page Rendering Based on State */}
       {page === "login" && <LoginPage setPage={setPage} />}
@@ -34,7 +36,7 @@ function App() {
       {page === "skillSelection" && <SkillSelection setPage={setPage} />}
       {page === "videoRecommendations" && <VideoRecommendations setPage={setPage} />}
       {page === "quizPage" && <QuizPage setPage={setPage} />}
-      {page === "finalPage" && <FinalPage />} {/* Final Page Added */}
+      {page === "finalPage" && <FinalPage />} {/* Final Page - No Navbar */}
     </div>
   );
 }

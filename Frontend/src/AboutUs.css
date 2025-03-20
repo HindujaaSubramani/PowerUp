@@ -1,0 +1,95 @@
+/* About Us Page Styling */
+.aboutus-container {
+    max-width: 800px;
+    margin: 80px auto 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Top Banner */
+  .aboutus-banner {
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  /* Heading Styles */
+  .aboutus-container h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .aboutus-container h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 20px;
+  }
+  
+  /* Paragraph Styling */
+  .aboutus-container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* List Styling */
+  .aboutus-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .aboutus-container ul li {
+    font-size: 16px;
+    color: #444;
+    padding: 10px;
+    background: #f8f9fa;
+    margin: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .aboutus-container ul li:hover {
+    background: #e9f2ff;
+  }
+  
+  /* Button Styling */
+  .aboutus-container button {
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .aboutus-container button:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .aboutus-container {
+      width: 90%;
+    }
+  }
+  

@@ -1,88 +1,129 @@
-/* TrackSelection.css */
+/* Track Selection Page - Consistent with Login Page */
 .track-selection-container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: #333;
+  width: 80%;
+  max-width: 900px;
+  margin: 100px auto 40px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.track-selection-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Track List - Aligns Items */
+.track-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Individual Track Box */
+.track-box {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.track-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Track Image */
+.track-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.track-image img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Track Info */
+.track-info {
+  flex: 2;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.track-info h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.track-info p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Course Button */
+.go-course-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Hover Effect */
+.go-course-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Quote Bar */
+.quote-bar {
+  margin-top: 30px;
+  padding: 12px;
+  font-size: 16px;
+  background: #f8f9fa;
+  border-radius: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .track-selection-container {
+      width: 95%;
+      padding: 20px;
   }
-  
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .track-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  
+
   .track-box {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+      flex-direction: column;
+      text-align: center;
   }
-  
-  .track-box:hover {
-    transform: scale(1.02);
-  }
-  
+
   .track-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+      margin-bottom: 15px;
   }
-  
-  .track-image img {
-    max-width: 100px;
-    height: auto;
-  }
-  
+
   .track-info {
-    flex: 2;
-    text-align: left;
-    padding-left: 20px;
+      text-align: center;
+      padding-left: 0;
   }
-  
-  .track-info h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-  .track-info p {
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .go-course-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background 0.3s;
-  }
-  
-  .go-course-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .quote-bar {
-    margin-top: 30px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #eee;
-    border-radius: 5px;
-    color: #333;
-  }
-  
+}
